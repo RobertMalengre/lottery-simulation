@@ -1,0 +1,69 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 10px;
+    justify-items: center;
+    width: fit-content;
+    margin: 20px auto;
+}
+
+input[type="checkbox"] {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.playing, .results {
+    flex: 1;
+    margin: 0 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.playing h2, .results h2 {
+    margin-top: 0;
+}
+
+.circles {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.circle {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: #007bff;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+.results p {
+    margin: 10px 0;
+}
