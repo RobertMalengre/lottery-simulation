@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nationale Lotterij simulation</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+
 </head>
+
 <body>
-    <h1>dzdqzd</h1>
-    
+    <h1>Play the National Lottery</h1>
+
     <div class="checkbox-grid">
         <!-- 45 checkboxes in a grid -->
         <label><input type="checkbox"></label>
@@ -64,29 +67,34 @@
     </div>
 
     <div class="content-container">
-        <div class="playing">
-            <h2>Playing</h2>
-            <p>This is where the game instructions or other relevant information will go.</p>
-            <div class="circles">
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-            </div>
-            <div class="error-message">
-                <!-- Error message will go here -->
-            </div>
+        <div class="game-info">
+            <h2>Game information</h2>
+        <div class="grouped-info">
+        <p>Remaining balls</p>
+        <div class="circles">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
         </div>
-
-        <div class="results">
-            <h2>Results</h2>
-            <p>Paragraph 1</p>
-            <p>Paragraph 2</p>
-            <p>Paragraph 3</p>
-            <p>Paragraph 4</p>
         </div>
+    <div class="error-message">
+        <p class="error-text balls-error">No balls remaining. Please deselect a square.</p>
     </div>
+    </div>
+
+    <div class="results">
+        <h2>Results</h2>
+        <p>Paragraph 1</p>
+        <p>Paragraph 2</p>
+        <p>Paragraph 3</p>
+        <p>Paragraph 4</p>
+    </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
