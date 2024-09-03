@@ -1,100 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nationale Lotterij simulation</title>
+    <title>National lottery simulation</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-
 </head>
-
 <body>
-    <h1>Play the National Lottery</h1>
-
-    <div class="checkbox-grid">
-        <!-- 45 checkboxes in a grid -->
-        <label><input type="checkbox"></label>
-        <label><input type="checkbox"></label>
-        <label><input type="checkbox"></label>
-        <label><input type="checkbox"></label>
-        <label><input type="checkbox"></label>
-        <label><input type="checkbox"></label>
-        <label><input type="checkbox"></label>
-        <label><input type="checkbox"></label>
-        <label><input type="checkbox"></label>
-
-        <label><input type="checkbox"></label>
-        <label><input type="checkbox"></label>
-        <label><input type="checkbox"></label>
-        <label><input type="checkbox"></label>
-        <label><input type="checkbox"></label>
-        <label><input type="checkbox"></label>
-        <label><input type="checkbox"></label>
-        <label><input type="checkbox"></label>
-        <label><input type="checkbox"></label>
-
-        <label><input type="checkbox"></label>
-        <label><input type="checkbox"></label>
-        <label><input type="checkbox"></label>
-        <label><input type="checkbox"></label>
-        <label><input type="checkbox"></label>
-        <label><input type="checkbox"></label>
-        <label><input type="checkbox"></label>
-        <label><input type="checkbox"></label>
-        <label><input type="checkbox"></label>
-
-        <label><input type="checkbox"></label>
-        <label><input type="checkbox"></label>
-        <label><input type="checkbox"></label>
-        <label><input type="checkbox"></label>
-        <label><input type="checkbox"></label>
-        <label><input type="checkbox"></label>
-        <label><input type="checkbox"></label>
-        <label><input type="checkbox"></label>
-        <label><input type="checkbox"></label>
-
-        <label><input type="checkbox"></label>
-        <label><input type="checkbox"></label>
-        <label><input type="checkbox"></label>
-        <label><input type="checkbox"></label>
-        <label><input type="checkbox"></label>
-        <label><input type="checkbox"></label>
-        <label><input type="checkbox"></label>
-        <label><input type="checkbox"></label>
-        <label><input type="checkbox"></label>
-    </div>
-
-    <div class="content-container">
-        <div class="game-info">
-            <h2>Game information</h2>
-        <div class="grouped-info">
-        <p>Remaining balls</p>
-        <div class="circles">
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
+    <h1>National lottery simulation</h1>
+    <div class="container">
+        <div id="grid" class="grid-container"></div>
+        <div class="controls">
+            <button id="lockIn" disabled>Lock in</button>
+            <button id="playAgain" disabled>Play again</button>
+            <button id="clearGrid" disabled>Clear grid</button>
+            <div class="simulation-controls">
+                <button id="runSimulation" disabled>Run simulation</button>
+                <input type="number" id="simulationCount" min="1" max="1000" value="1">
+            </div>
         </div>
+    </div>
+    <div class="remaining-choices">
+        <span>Remaining choices:</span>
+        <div id="choices">
+            <div class="choice-ball blue"></div>
+            <div class="choice-ball blue"></div>
+            <div class="choice-ball blue"></div>
+            <div class="choice-ball blue"></div>
+            <div class="choice-ball blue"></div>
+            <div class="choice-ball blue"></div>
         </div>
-    <div class="error-message">
-        <p class="error-text balls-error">No balls remaining. Please deselect a square.</p>
     </div>
+    <div class="stats">
+        <p>Total times played: <span id="totalTimesPlayed">0</span></p>
+        <p>Games with 0 matching numbers: <span id="matches0">0</span></p>
+        <p>Games with 1 matching number: <span id="matches1">0</span></p>
+        <p>Games with 2 matching numbers: <span id="matches2">0</span></p>
+        <p>Games with 3 matching numbers: <span id="matches3">0</span></p>
+        <p>Games with 4 matching numbers: <span id="matches4">0</span></p>
+        <p>Games with 5 matching numbers: <span id="matches5">0</span></p>
+        <p>Games with 6 matching numbers: <span id="matches6">0</span></p>
     </div>
-
-    <div class="results">
-        <h2>Results</h2>
-        <p>Paragraph 1</p>
-        <p>Paragraph 2</p>
-        <p>Paragraph 3</p>
-        <p>Paragraph 4</p>
-    </div>
-    </div>
-
     <script src="script.js"></script>
 </body>
-
 </html>
