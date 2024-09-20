@@ -123,15 +123,19 @@ document.addEventListener('DOMContentLoaded', () => {
         let simulationCount = parseInt(simulationCountInput.value);
 
         // Ensure the value is a valid whole number between 1 and 1000
-        if (isNaN(simulationCount) || simulationCount < 1 || simulationCount > 1000) {
-            alert("Please enter a whole number between 1 and 1000.");
+        if (isNaN(simulationCount) || simulationCount < 1 || simulationCount > 10000000) {
+            alert("Please enter a whole number between 1 and 10000000.");
             return;
         }
 
         let intervalTime = simulationCount > 200 ? 40 : 100; // 0.04s for > 200, otherwise 0.1s
+        if (simulationCount > 1000){
+            intervalTime = 1
+        }
         let count = 0;
 
         const simulationInterval = setInterval(() => {
+        
             if (count >= simulationCount) {
                 clearInterval(simulationInterval);
                 runSimulationButton.disabled = false;
@@ -150,8 +154,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (isNaN(value) || value < 1) {
             simulationCountInput.value = 1;
-        } else if (value > 1000) {
-            simulationCountInput.value = 1000;
+        } else if (value > 10000000) {
+            simulationCountInput.value = 10000000;
         }
     });
 
